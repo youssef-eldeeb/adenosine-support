@@ -1,74 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yami Display – Support</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    h1 {
-      font-size: 2em;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    input,
-    textarea {
-      padding: 10px;
-      font-size: 1em;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      padding: 12px;
-      font-size: 1em;
-      background: #007aff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #005bb5;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adenosine – Support</title>
+<style>
+:root { color-scheme: light dark; --paper:#faf8f3; --ink:#24332e; --muted:#4f6159; --line:#c4cec6; --accent:#315c46; --field:#fff; }
+@media(prefers-color-scheme:dark){:root{--paper:#18221f;--ink:#f2f1e8;--muted:#bac9bf;--line:#506258;--accent:#afd3b9;--field:#202d27}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+main,header,footer{max-width:44rem;margin:auto;padding:0 1.25rem}header,footer{display:flex;gap:1.25rem;align-items:center;justify-content:space-between}
+header{padding-block:1.5rem;border-bottom:1px solid var(--line)}header strong{letter-spacing:-.035em;font-size:1.25rem}
+main{padding-block:2rem}footer{border-top:1px solid var(--line);padding-block:1.25rem;color:var(--muted);font-size:.9rem}
+h1,h2{line-height:1.2;letter-spacing:-.035em}h1{font-size:clamp(2rem,7vw,3rem);margin:0 0 .7rem}h2{font-size:1.3rem;margin:2rem 0 .55rem}p{margin:.6rem 0 1rem}
+a{color:var(--accent);text-underline-offset:.18em}details{padding:.7rem 0;border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:600}
+label{display:block;font-weight:600;margin-top:1rem}input,textarea,button{font:inherit}
+input,textarea{display:block;margin:.35rem 0;width:100%;padding:.65rem .8rem;border:1px solid var(--line);border-radius:.5rem;color:var(--ink);background:var(--field)}
+textarea{resize:vertical}button{border:none;border-radius:.5rem;background:var(--accent);color:var(--paper);padding:.65rem 1rem;cursor:pointer;font-weight:650}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.note{color:var(--muted);font-size:.92rem}
+</style>
 </head>
 <body>
-
-  <h1>Yami Display – Support</h1>
-
-  <p>
-    If you have questions, encounter an issue, or need help with Yami Display,
-    please fill out the form below and we’ll get back to you.
-  </p>
-
-  <form action="https://formspree.io/f/xjybzogk" method="POST">
-    <input type="text" name="name" placeholder="Your name" required>
-
-    <input type="email" name="_replyto" placeholder="Your email" required>
-
-    <textarea
-      name="message"
-      rows="6"
-      placeholder="Your message"
-      required
-    ></textarea>
-
-    <button type="submit">Send</button>
-  </form>
-
+<header><strong>Adenosine</strong><nav aria-label="Related page"><a href="privacy.html">Privacy policy</a></nav></header>
+<main>
+<h1>Adenosine support</h1>
+<p>Need help with a display, a tint, or a purchase? You can contact us below.</p>
+<h2>Quick answers</h2>
+<details><summary>Where do I find Adenosine after opening it?</summary><p>Click its icon in the Mac menu bar. Expand a display’s card to see its controls. Choose a color to tint bright whites; click the selected color again to return to neutral.</p></details>
+<details><summary>Why don’t I see brightness and warmth sliders?</summary><p>Those sliders appear on external display cards. On a built-in display, use the four tint swatches and adjust brightness with your Mac’s usual controls.</p></details>
+<details><summary>How do I restore the full version?</summary><p>Sign in to the Mac App Store with the Apple Account used for your purchase. Open Adenosine and choose <strong>Restore Purchases</strong> on the trial or unlock screen. The seven-day trial does not automatically charge you; unlocking the full version is a separate one-time purchase.</p></details>
+<h2 id="contact">Contact the developer</h2>
+<p>This form sends your message to the developer of Adenosine. For display issues, your macOS version and whether the display is built-in or external are helpful.</p>
+<form action="https://formspree.io/f/xjybzogk" method="post">
+<label for="name">Name <span class="note">(optional)</span></label>
+<input id="name" name="name" autocomplete="name" maxlength="120">
+<label for="email">Reply email</label>
+<input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+<label for="message">How can we help?</label>
+<textarea id="message" name="message" rows="6" maxlength="8000" aria-describedby="form-note" required></textarea>
+<p id="form-note" class="note">Formspree delivers your message to our support inbox on Gmail so we can reply. Please don’t include passwords, payment details, or sensitive documents. For a privacy or deletion request, use this same form. <a href="privacy.html">How we handle your information</a>.</p>
+<button type="submit">Send message</button>
+</form>
+</main>
+<footer><span>Adenosine</span><a href="privacy.html">Privacy policy</a></footer>
 </body>
 </html>
